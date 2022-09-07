@@ -131,9 +131,10 @@ addEventListener("fetch", async event=>{
                 return new Response(
                 	"CLOUDFLARE-CORS-ANYWHERE\n\n" + 
                 	"Source:\nhttps://github.com/Zibri/cloudflare-cors-anywhere\n\n" + 
-                	"Usage:\n" + origin_url.origin + "/?uri\n\n" +
-			"Donate:\nhttps://paypal.me/Zibri/5\n\n" +
-                	"Limits: 100,000 requests/day\n" + 
+			"Fork:\nhttps://github.com/chiro2001/cloudflare-cors-anywhere\n\n" +
+                	"Usage:\n\"" + origin_url.origin + "/?uri\"\n\n" +
+			"Donate (to author):\nhttps://paypal.me/Zibri/5\n\n" +
+			"Limits: 100,000 requests/day\n" + 
                 	"          1,000 requests/10 minutes\n\n" + 
                 	(orig != null ? "Origin: " + orig + "\n" : "") + 
                 	"Ip: " + remIp + "\n" + 
@@ -147,9 +148,7 @@ addEventListener("fetch", async event=>{
 
             return new Response(
                 "Create your own cors proxy</br>\n" + 
-                "<a href='https://github.com/Zibri/cloudflare-cors-anywhere'>https://github.com/Zibri/cloudflare-cors-anywhere</a></br>\n" +
-                "\nDonate</br>\n" +
-                "<a href='https://paypal.me/Zibri/5'>https://paypal.me/Zibri/5</a>\n",
+                "<a href='https://github.com/Zibri/cloudflare-cors-anywhere'>https://github.com/Zibri/cloudflare-cors-anywhere</a></br>\n",
                 {
                     status: 403,
                     statusText: 'Forbidden',
