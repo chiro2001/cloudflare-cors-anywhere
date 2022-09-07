@@ -129,10 +129,11 @@ addEventListener("fetch", async event=>{
                 }
 
                 return new Response(
+			"/*\n\n" +
                 	"CLOUDFLARE-CORS-ANYWHERE\n\n" + 
                 	"Source:\nhttps://github.com/Zibri/cloudflare-cors-anywhere\n\n" + 
 			"Fork:\nhttps://github.com/chiro2001/cloudflare-cors-anywhere\n\n" +
-                	"Usage:\n\"" + origin_url.origin + "/?uri\"\n\n" +
+                	"Usage:\n" + origin_url.origin + "/?uri\n\n" +
 			"Donate (to author):\nhttps://paypal.me/Zibri/5\n\n" +
 			"Limits: 100,000 requests/day\n" + 
                 	"          1,000 requests/10 minutes\n\n" + 
@@ -140,7 +141,8 @@ addEventListener("fetch", async event=>{
                 	"Ip: " + remIp + "\n" + 
                 	(country ? "Country: " + country + "\n" : "") + 
                 	(colo ? "Datacenter: " + colo + "\n" : "") + "\n" + 
-                	((xheaders != null) ? "\nx-cors-headers: " + JSON.stringify(xheaders) : ""),
+                	((xheaders != null) ? "\nx-cors-headers: " + JSON.stringify(xheaders) : "") + 
+			"\n\n*/",
                 	{status: 200, headers: myHeaders}
                 );
             }
